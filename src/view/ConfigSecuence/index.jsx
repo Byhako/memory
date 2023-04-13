@@ -7,7 +7,7 @@ export default function ConfigSecuence({ saveConfig }) {
   const [drums, setDrums] = useState('')
 
   const handleClick = () => {
-    if (drums && drums !== 0) {
+    if (drums && drums !== 0 && drums < 16) {
       saveConfig(drums)
     }
   }
@@ -25,7 +25,7 @@ export default function ConfigSecuence({ saveConfig }) {
       />
       <button 
         type='button'
-        className={drums !== '' && drums !== '0' ? 'activate' : 'deactivate'}
+        className={drums !== '' && drums !== '0' && drums<16 ? 'activate' : 'deactivate'}
         onClick={handleClick}
       >Play</button>
     </section>

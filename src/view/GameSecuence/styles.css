@@ -9,7 +9,7 @@
   align-items: center;
 }
 
-.game_secuence button {
+.game_secuence .btn_nav {
   border: none;
   padding: 5px;
   height: 30px;
@@ -17,7 +17,7 @@
   cursor: pointer;
 }
 
-.game_secuence button:hover {
+.game_secuence .btn_nav:hover {
   background-color: #e9d6d1;
 }
 
@@ -60,4 +60,64 @@
 
 .drum .deactive {
   opacity: 0;
+}
+
+.modal {
+  border: 17px solid;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 47px 10px;
+  position: absolute;
+  top: 140px;
+  left: calc(50% - 170px);
+  z-index: 2;
+  background: #333;
+  box-sizing: border-box;
+}
+
+.modal h2 {
+  margin: 0;
+}
+
+.success {
+  color: greenyellow;
+  border-color: greenyellow;
+}
+
+.error {
+  color: rgb(240, 50, 50);
+  border-color: rgb(240, 50, 50);
+}
+
+.btn_modal {
+  margin-top: 28px;
+  padding: 10px 20px;
+  height: auto;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn_modal:hover {
+  background-color: #f080c5;
+}
+
+@media screen and (max-width: 480px) {
+  .game_secuence .container {
+    width: auto;
+  }
+  .modal {
+    left: 11px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 900px) {
+  .game_secuence .container {
+    width: 70%;
+  }
+  .modal {
+    left: 30px;
+  }
 }

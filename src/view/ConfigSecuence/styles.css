@@ -48,3 +48,9 @@
 .config_secuence label {
   color: #f080c5;
 }
+
+@media screen and (max-width: 480px) {
+  .config_secuence {
+    width: auto;
+  }
+}

@@ -4,7 +4,7 @@ import ConfigSecuence from './view/ConfigSecuence'
 import './App.css'
 
 function App() {
-  const [state, setState] = useState('7')
+  const [state, setState] = useState('config')
 
   const saveConfig = (data) => {
     setState(data)
