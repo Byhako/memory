@@ -4,10 +4,10 @@ import ConfigSecuence from './view/ConfigSecuence'
 import './App.css'
 
 function App() {
-  const [state, setState] = useState('config')
+  const [state, setState] = useState('7')
 
   const saveConfig = (data) => {
-    console.log(data)
+    setState(data)
   }
 
   const newConfig = () => {
@@ -19,7 +19,7 @@ function App() {
       {state === 'config' ? (
         <ConfigSecuence saveConfig={saveConfig} />
       ) : (
-        <GameSecuence newConfig={newConfig} />
+        <GameSecuence newConfig={newConfig} numberDrums={state} />
       )}
     </div>
   )
